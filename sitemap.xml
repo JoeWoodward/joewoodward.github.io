@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://JoeWoodward.github.com/joewoodward/blog/2012/09/21/hello-world/</loc>
+        <lastmod>2013-05-28T13:54:49+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://JoeWoodward.github.com/joewoodward/blog/2012/09/22/a-slick-jquery-slider-plugin/
+        </loc>
+        <lastmod>2013-05-28T13:54:49+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JoeWoodward.github.com/joewoodward/about/</loc>
+        <lastmod>2013-05-28T14:37:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JoeWoodward.github.com/joewoodward/blog/archives/</loc>
+        <lastmod>2013-05-28T13:54:49+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JoeWoodward.github.com/joewoodward/</loc>
+        <lastmod>2013-05-28T13:54:49+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JoeWoodward.github.com/joewoodward/instagrams/</loc>
+        <lastmod>2013-05-28T13:54:49+01:00</lastmod>
+    </url>
+</urlset>
