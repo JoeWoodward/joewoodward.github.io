@@ -1,0 +1,43 @@
+<!-- Logo -->
+<aside id="logo" class="clearfix">
+  <div class="clearfix">
+    <a href="{{ root_url}}/">{{ site.title }}</a>
+  </div>
+</aside>
+
+<ul id="menu">
+{% if site.title %}
+  <li class="title">
+    <h1 id="title"><a href="{{ root_url }}/">{{ site.title }}</a></h1>
+  </li>
+{% if site.subtitle %}
+  <li class="subtitle">
+    <h2 id="subtitle">{{ site.subtitle }}</h2>
+  </li>
+{% endif %}
+</ul>
+<ul id="menu">
+  <li class="icon-links">
+  <a href="http://uk.linkedin.com/pub/joe-woodward/34/627/920"><i class="icon-linkedin"></i></a>
+{% if site.twitter_user %}
+  <li class="icon-links">
+    <a href="http://twitter.com/{{ site.twitter_user }}/"><i class="icon-twitter"></i></a>
+  </li>
+{% endif %}
+{% if site.github_user and site.github_show_profile_link %}
+  <li class="icon-links">
+  <a href="http://github.com/{{ site.github_user }}/"><i class="icon-github"></i></a>
+  </li>
+{% endif %}
+  <li class="icon-links rss">
+  <a href="/atom.xml"><i class="icon-rss"></i></a>
+  </li>
+</ul>
+<ul id="menu">
+{% endif %}
+  <li class="link"><a href="{{ root_url }}/">blog</a></li>
+  <li class="link"><a href="{{ root_url }}/blog/archives">archives</a></li>
+  <li class="link"><a href="/about/">about</a></li>
+  <li class="link"><a href="/instagrams/">instagrams</a></li>
+</ul>
+
