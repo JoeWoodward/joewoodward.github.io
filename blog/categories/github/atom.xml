@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Joe Woodward]]></title>
   <link href="http://joewoodward.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://joewoodward.github.io/"/>
-  <updated>2013-06-03T13:23:18+01:00</updated>
+  <updated>2013-06-16T00:56:18+01:00</updated>
   <id>http://joewoodward.github.io/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -14,79 +14,183 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Blogging with Octopress and GitHub Pages]]></title>
+    <title type="html"><![CDATA[Octopress on GitHub Pages in 15 minutes]]></title>
     <link href="http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages/"/>
     <updated>2013-06-02T23:21:00+01:00</updated>
     <id>http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages</id>
-    <content type="html"><![CDATA[<h4>Sooo, Why Would I Want to Use Octopress?</h4>
+    <content type="html"><![CDATA[<p><blockquote><p>Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages. To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress All of that is already taken care of.</p></blockquote></p>
 
-<p>I wanted a blogging system that was powerful and flexible
-but also lightweight. I&rsquo;d heard of <a href="http://pages.github.com/">GitHub Pages</a>
-and I use <a href="http://github.com/">GitHub</a> daily for work so I decided to see what the service had
-to offer.</p>
-
-<p>To run a site on GitHub Pages you can either push static html to the
-GitHub repo or use <a href="http://jekyllrb.com/">Jekyll</a>. I decided to look for some
-examples configurations and found <a href="http://octopress.org/">Octopress</a>.</p>
+<p><img src="/images/octopress_logo.png" title="Octopress" ></p>
 
 <!-- more -->
 
 
-<p><blockquote><p><a href="http://octopress.org/">Octopress</a> is a framework designed by <a href="http://brandonmathis.com/">Brandon Mathis</a> for <a href="http://jekyllrb.com/">Jekyll</a>, the blog aware static site generator powering <a href="http://pages.github.com/">Github Pages</a>. To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress All of that is already taken care of.</p></blockquote></p>
+<h4>What Do You Need?</h4>
 
-<h4>Show Me The Awesome!</h4>
-
-<p>Octopress brings ease of setup for Jekyll and provides</p>
+<p>You only need a few things to use Octopress' awesomeness</p>
 
 <ul>
-<li>A semantic HTML5 template</li>
-<li>A Mobile first responsive layout (rotate, or resize your browser and see)</li>
-<li>Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics</li>
-<li>An easy deployment strategy using Github pages or Rsync</li>
-<li>Built in support for POW and Rack servers</li>
-<li>Easy theming with Compass and Sass</li>
-<li>A Beautiful <a href="http://ethanschoonover.com/solarized">Solarized</a> syntax highlighting</li>
+<li><a href="http://git-scm.com/downloads">Git</a></li>
+<li><a href="http://www.ruby-lang.org/en/downloads/">Ruby 1.9.3</a> (I highly
+recommend using <a href="https://github.com/sstephenson/rbenv">rbenv</a> to
+handle multiple ruby versions)</li>
+<li>A text editor</li>
 </ul>
 
 
-<p><a href="http://octopress.org/docs/blogging/plugins/">Octopress uses plugins</a> to do
-pretty much anything you want but if these aren&rsquo;t enough you can also install
-<a href="http://github.com/imathis/octopress/wiki/3rd-party-plugins">3rd party plugins</a> or you can write your own.</p>
+<h4>Setting Up Octopress</h4>
+
+<p>Octopress' source code is stored on github so all we have to do is clone the repo.</p>
+
+<pre>
+$ git clone git://github.com/imathis/octopress.git my_blog
+</pre>
+
+
+<p>You will need to change into the directory that you
+cloned Octopress into. If you are using rvm to manage your ruby versions, you will
+be asked if you want to trust the .rvmrc file, you should answer yes.</p>
+
+<pre>
+$ cd my_blog
+</pre>
+
+
+<p>Next we need to install a few dependancies, Octopress uses the bundler
+gem making the process very simple. If you don&rsquo;t already have bundler,
+install it.</p>
+
+<pre>
+$ gem install bundler
+</pre>
+
+
+<p>Note: if you are using rbenv you will need to run rehash for bundler to
+work.</p>
+
+<pre>
+$ rbenv rehash
+</pre>
+
+
+<p>The bundler gem uses a gemfile to store a list of dependancies, all you have to do
+to install them run the bundle install command.</p>
+
+<pre>
+$ bundle install
+</pre>
+
+
+<p>Now the dependancies are installed you are almost ready to view your
+new blog. You can install the default theme or <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">download a different
+theme</a>.
+To install the default theme run</p>
+
+<pre>
+$ rake install
+</pre>
+
+
+<p>You can view yoursite locally by running rake preview and visiting
+<a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a></p>
+
+<pre>
+$ rake preview
+</pre>
+
+
+<p><img src="/images/first_look.png"></p>
+
+<h4>Deploying Your Blog To GitHub Pages</h4>
+
+<p>To host a site on <a href="http://pages.github.com/">GitHub Pages</a> you need to
+create a <a href="https://github.com/repositories/new">new GitHub repo</a> with
+your github user name like this <code>username.github.io</code></p>
+
+<p>Github Pages uses the master branch of your repo the in the same way a
+web server uses the public directory. It servs the files to your github url
+<a href="http://username.github.com.">http://username.github.com.</a>
+This means you need to work on the source for your blog in the source branch and commit the generated
+content to the master branch. Octopress has a rake task that
+helps you set all this up.</p>
+
+<pre>
+$ rake setup_github_pages
+</pre>
+
+
+<p>This will</p>
 
 <ul>
-<li><a href="http://octopress.org/docs/plugins/video-tag/">HTML5 Video Tag</a> &ndash; embeds mp4 encoded HTML5 videos</li>
-<li><a href="http://octopress.org/docs/plugins/backtick-codeblock/">Backtick Code Block</a> &ndash; for simple lightweight code sharing</li>
-<li><a href="http://octopress.org/docs/plugins/codeblock/">Code Block</a> &ndash; for sharing code with titles and links</li>
-<li><a href="http://octopress.org/docs/plugins/include-code/">Include Code</a> &ndash; embed code from your filesystem with a download link</li>
-<li><a href="http://octopress.org/docs/plugins/gist-tag/">Gist Tag</a> &ndash; automatically downloads and embeds Github gists</li>
-<li><a href="http://octopress.org/docs/plugins/jsfiddle-tag/">jsFiddle</a> &ndash; embeds code from jsFiddle</li>
-<li><a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a> &ndash; easily post images with class names and titles</li>
-<li><a href="http://octopress.org/docs/plugins/render-partial/">Render Partial</a> &ndash; insert any file into another post or page</li>
-<li><a href="http://octopress.org/docs/plugins/blockquote/">Block Quote</a> &ndash; generate beautiful, semantic block quotes</li>
-<li><a href="http://octopress.org/docs/plugins/pullquote/">Pull Quote</a> &ndash; generate CSS only pull quotes — no duplicate data, no javascript</li>
-<li><a href="http://octopress.org/docs/plugins/category-generator/">Category Generator</a> &ndash; generates archive pages for each blog category</li>
-<li><a href="http://octopress.org/docs/plugins/include-array/">Include Array</a> &ndash; includes an array of partials specified in the _config.yml</li>
+<li>Ask you for your Github Pages repository url.</li>
+<li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+<li>Add your Github Pages repository as the default origin remote.</li>
+<li>Switch the active branch from master to source.</li>
+<li>Configure your blog’s url according to your repository.</li>
+<li>Setup a master branch in the _deploy directory for deployment.</li>
 </ul>
 
 
-<h4>Is It Obvious Why I Chose Octopress?</h4>
+<p>Now that you have setup deployment you can generate your site and deploy
+it.
+Run rake generate and then rake deploy. This will generate your blog files and copy them over into
+the _deploy directory, add them to git and push it to your master branch
+on GitHub.</p>
 
-<p>Not only is Octopress built on a powerful, flexible, lightweight staitic site generator that I could host on
-GitHub Pages, it is also a really fun to use.</p>
+<pre>
+$ rake generate
+$ rake deploy
+</pre>
 
-<p>Octopress posts are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>
-which is awesome, if you haven&rsquo;t used Markdown, I suggest
-<a href="http://daringfireball.net/projects/markdown/syntax">checking it out</a>.
-I use <a href="http://www.vim.org/">Vim</a> text editor everyday so working with
-Markdown is a breeze.</p>
 
-<p>I also work with <a href="http://git-scm.com/">git</a>, <a href="http://git-scm.com/about">the amazing version
-control system</a>, daily. Jekyll was created by
-<a href="http://tom.preston-werner.com/">Tom Preston-Werner</a> from <a href="https://github.com/mojombo">github</a> and is designed to use git.
-Octopress is well intergrated with GitHub and is really well
-<a href="http://octopress.org/docs/">documented</a> making it really easy to use.</p>
+<p>Within a few minutes you should recieve an email from GitHub confirming
+your blog has been published. Your blog&rsquo;s live, go to your GitHub Pages
+URL, <a href="http://username.github.io,">http://username.github.io,</a> to check it out.</p>
 
-<h4>Enough Rambling, How Do I Set It Up?</h4>
+<p><img src="/images/first_deploy.png"></p>
+
+<h4>Afterthoughts</h4>
+
+<p>If you would like to use your own domain rather than username.github.io, you have to create
+a CNAME file in the source directory containing your domain name.</p>
+
+<pre>
+$ echo 'your-domain.com' >> source/CNAME
+</pre>
+
+
+<p>Your DNS needs to be pointing to the right place</p>
+
+<ul>
+<li>If you are using a domain like <code>your-domain.com</code> you should
+configure an <strong>A record</strong> pointing to <code>204.232.175.78</code></li>
+<li>If you are using subdomains like <code>blog.your-domain.com</code> you
+should configure a <strong>CNAME record</strong> pointing to
+<code>username.github.io</code></li>
+</ul>
+
+
+<p>Octopress comes ready to use POW, to set it up just create a
+symolic link between your blog directory and your pow directory under
+the name of octopress. With this configured you can run rake watch and
+load up <a href="http://octopress.dev/">octopress.dev</a> instead of 0.0.0.0:4000</p>
+
+<pre>
+$ cd ~/.pow
+$ ln -s /path/to/octopress octopress
+$ cd -
+$ rake watch
+</pre>
+
+
+<p>I&rsquo;ve found that because I use rake watch, the only time I generate the
+site is before deploy. Looking through the Rakefile I noticed there is a
+task called gen_deploy which combines the generate and deploy steps.</p>
+
+<pre>
+$ rake gen_deploy
+</pre>
+
 ]]></content>
   </entry>
   
