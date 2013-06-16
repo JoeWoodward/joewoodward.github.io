@@ -4,7 +4,7 @@
   <title><![CDATA[Joe Woodward]]></title>
   <link href="http://joewoodward.github.io/atom.xml" rel="self"/>
   <link href="http://joewoodward.github.io/"/>
-  <updated>2013-06-16T00:56:18+01:00</updated>
+  <updated>2013-06-16T01:02:28+01:00</updated>
   <id>http://joewoodward.github.io/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -150,9 +150,9 @@ URL, <a href="http://username.github.io,">http://username.github.io,</a> to chec
 
 <p><img src="http://joewoodward.github.io/images/first_deploy.png"></p>
 
-<h4>Afterthoughts</h4>
+<h4>Using Your Own Domain Name</h4>
 
-<p>If you would like to use your own domain rather than username.github.io, you have to create
+<p>If you would like to use your own domain name rather than username.github.io, you have to create
 a CNAME file in the source directory containing your domain name.</p>
 
 <pre>
@@ -169,28 +169,6 @@ configure an <strong>A record</strong> pointing to <code>204.232.175.78</code></
 should configure a <strong>CNAME record</strong> pointing to
 <code>username.github.io</code></li>
 </ul>
-
-
-<p>Octopress comes ready to use POW, to set it up just create a
-symolic link between your blog directory and your pow directory under
-the name of octopress. With this configured you can run rake watch and
-load up <a href="http://octopress.dev/">octopress.dev</a> instead of 0.0.0.0:4000</p>
-
-<pre>
-$ cd ~/.pow
-$ ln -s /path/to/octopress octopress
-$ cd -
-$ rake watch
-</pre>
-
-
-<p>I&rsquo;ve found that because I use rake watch, the only time I generate the
-site is before deploy. Looking through the Rakefile I noticed there is a
-task called gen_deploy which combines the generate and deploy steps.</p>
-
-<pre>
-$ rake gen_deploy
-</pre>
 
 ]]></content>
   </entry>
