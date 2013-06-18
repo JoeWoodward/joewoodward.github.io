@@ -9,17 +9,17 @@ $(window).load(function(){
   $(window).scroll(function(){
     if($(window).width() < 980){
       if($(window).scrollTop() > 216){
-        $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: '-216px', boxShadow: '0 0 10px rgba(0,0,0,0.1)'});
-        $('#main').css({marginTop: 254})
+        fixNav();
       } else {
-        $('#sidebar').css({  position: '', zIndex: '1', top: '', boxShadow: 'none'});
-        $('#main').css({marginTop: '-1px'})
+        unfixNav();
       }
     }
   });
   $(window).resize(function(){
     if($(window).width() < 980 && $('#no_distractions').length > 0){
       expandNav();
+    } else if($(window).width() > 979 && $('.nav_fixed').length > 0) {
+      unfixNav();
     }
   });
 });
@@ -32,4 +32,14 @@ function expandNav(){
 function expandArticle(){
   $('#main').attr('id', 'no_distractions');
   $('#no_distractions_toggle').css({left: 30, backgroundImage: 'url(/images/line-tile.png)', borderRadius: 0, borderTopRightRadius: 5, borderBottomRightRadius: 5, borderLeft: 'none', borderRight: '1px solid #e8e8e8'}).text('>');
+}
+
+function fixNav(){
+  $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: '-216px', boxShadow: '0 0 10px rgba(0,0,0,0.1)'}).addClass('nav_fixed');
+  $('#main').css({marginTop: 254});
+}
+
+function unfixNav(){
+  $('#sidebar').css({  position: '', zIndex: '1', top: '', boxShadow: 'none'}).removeClass('nav_fixed');
+  $('#main').css({marginTop: '-1px'});
 }
