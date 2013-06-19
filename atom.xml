@@ -4,7 +4,7 @@
   <title><![CDATA[Joe Woodward]]></title>
   <link href="http://joewoodward.github.io/atom.xml" rel="self"/>
   <link href="http://joewoodward.github.io/"/>
-  <updated>2013-06-18T15:22:59+01:00</updated>
+  <updated>2013-06-19T23:32:41+01:00</updated>
   <id>http://joewoodward.github.io/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -41,7 +41,7 @@ handle multiple ruby versions)</li>
 
 <h4>Setting Up Octopress</h4>
 
-<p>Octopress&#8217; source code is stored on github so all we have to do is clone the repo.</p>
+<p>Octopress&#8217; source code is stored on github lets clone the repo.</p>
 
 <pre>
 $ git clone git://github.com/imathis/octopress.git my_blog

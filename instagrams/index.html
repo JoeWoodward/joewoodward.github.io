@@ -38,40 +38,45 @@
   <header role="banner" id="sidebar">
     <script type="text/javascript" src="/javascripts/nav_hide.js"></script>
 <!-- Logo -->
-<aside id="logo" class="clearfix">
-  <div class="clearfix">
-    <a href="/"></a>
+<div id="nav_resize_outer">
+  <aside id="logo" class="clearfix">
+    <div class="clearfix">
+      <a href="/"></a>
+    </div>
+  </aside>
+  <div id='nav_resize_title'>
+    <ul id="menu">
+    
+      <li class="title">
+        <h1 id="title"><a href="/">Joe Woodward</a></h1>
+      </li>
+    
+      <li class="subtitle">
+        <h2 id="subtitle">UK Rails Developer</h2>
+      </li>
+    
+    </ul>
+    <div class='clear_when_narrow'></div>
+    <ul id="menu">
+      <li class="icon-links">
+      <a href="http://uk.linkedin.com/pub/joe-woodward/34/627/920"><i class="icon-linkedin"></i></a>
+    
+      <li class="icon-links">
+        <a href="http://twitter.com/jwwrd/"><i class="icon-twitter"></i></a>
+      </li>
+    
+    
+      <li class="icon-links">
+      <a href="http://github.com/JoeWoodward/"><i class="icon-github"></i></a>
+      </li>
+    
+      <li class="icon-links rss">
+      <a href="/atom.xml"><i class="icon-rss"></i></a>
+      </li>
+    </ul>
   </div>
-</aside>
-
-<ul id="menu">
-
-  <li class="title">
-    <h1 id="title"><a href="/">Joe Woodward</a></h1>
-  </li>
-
-  <li class="subtitle">
-    <h2 id="subtitle">UK Rails Developer</h2>
-  </li>
-
-</ul>
-<ul id="menu">
-  <li class="icon-links">
-  <a href="http://uk.linkedin.com/pub/joe-woodward/34/627/920"><i class="icon-linkedin"></i></a>
-
-  <li class="icon-links">
-    <a href="http://twitter.com/jwwrd/"><i class="icon-twitter"></i></a>
-  </li>
-
-
-  <li class="icon-links">
-  <a href="http://github.com/JoeWoodward/"><i class="icon-github"></i></a>
-  </li>
-
-  <li class="icon-links rss">
-  <a href="/atom.xml"><i class="icon-rss"></i></a>
-  </li>
-</ul>
+</div>
+<div class='clear_when_narrow'></div>
 <ul id="menu">
 
   <li class="link"><a href="/">blog</a></li>
@@ -113,16 +118,6 @@
 
 
 
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

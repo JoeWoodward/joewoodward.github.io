@@ -9,7 +9,7 @@
   <meta name="author" content="Joe Woodward">
 
   
-  <meta name="description" content="Tweet Octopress on GitHub Pages in 15 Minutes Jun 2nd, 2013 Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static &hellip;">
+  <meta name="description" content="Octopress on GitHub Pages in 15 Minutes Jun 2nd, 2013 Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -38,40 +38,45 @@
   <header role="banner" id="sidebar">
     <script type="text/javascript" src="/javascripts/nav_hide.js"></script>
 <!-- Logo -->
-<aside id="logo" class="clearfix">
-  <div class="clearfix">
-    <a href="/"></a>
+<div id="nav_resize_outer">
+  <aside id="logo" class="clearfix">
+    <div class="clearfix">
+      <a href="/"></a>
+    </div>
+  </aside>
+  <div id='nav_resize_title'>
+    <ul id="menu">
+    
+      <li class="title">
+        <h1 id="title"><a href="/">Joe Woodward</a></h1>
+      </li>
+    
+      <li class="subtitle">
+        <h2 id="subtitle">UK Rails Developer</h2>
+      </li>
+    
+    </ul>
+    <div class='clear_when_narrow'></div>
+    <ul id="menu">
+      <li class="icon-links">
+      <a href="http://uk.linkedin.com/pub/joe-woodward/34/627/920"><i class="icon-linkedin"></i></a>
+    
+      <li class="icon-links">
+        <a href="http://twitter.com/jwwrd/"><i class="icon-twitter"></i></a>
+      </li>
+    
+    
+      <li class="icon-links">
+      <a href="http://github.com/JoeWoodward/"><i class="icon-github"></i></a>
+      </li>
+    
+      <li class="icon-links rss">
+      <a href="/atom.xml"><i class="icon-rss"></i></a>
+      </li>
+    </ul>
   </div>
-</aside>
-
-<ul id="menu">
-
-  <li class="title">
-    <h1 id="title"><a href="/">Joe Woodward</a></h1>
-  </li>
-
-  <li class="subtitle">
-    <h2 id="subtitle">UK Rails Developer</h2>
-  </li>
-
-</ul>
-<ul id="menu">
-  <li class="icon-links">
-  <a href="http://uk.linkedin.com/pub/joe-woodward/34/627/920"><i class="icon-linkedin"></i></a>
-
-  <li class="icon-links">
-    <a href="http://twitter.com/jwwrd/"><i class="icon-twitter"></i></a>
-  </li>
-
-
-  <li class="icon-links">
-  <a href="http://github.com/JoeWoodward/"><i class="icon-github"></i></a>
-  </li>
-
-  <li class="icon-links rss">
-  <a href="/atom.xml"><i class="icon-rss"></i></a>
-  </li>
-</ul>
+</div>
+<div class='clear_when_narrow'></div>
 <ul id="menu">
 
   <li class="link"><a href="/">blog</a></li>
@@ -85,8 +90,6 @@
     <article class="post">
   <div class="sharing-box">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages/" data-via="jwwrd" data-counturl="http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages/" data-size="large">Tweet</a>
-  
   
   
 </div>
@@ -94,7 +97,7 @@
   
   <header>
     
-      <h2 class="entry-title">Octopress on GitHub Pages in 15 Minutes</h2>
+      <h1 class="entry-title">Octopress on GitHub Pages in 15 Minutes</h1>
     
     
      
@@ -141,7 +144,7 @@ handle multiple ruby versions)</li>
 
 <h4>Setting Up Octopress</h4>
 
-<p>Octopress&#8217; source code is stored on github so all we have to do is clone the repo.</p>
+<p>Octopress&#8217; source code is stored on github lets clone the repo.</p>
 
 <pre>
 $ git clone git://github.com/imathis/octopress.git my_blog
@@ -277,7 +280,7 @@ should configure a <strong>CNAME record</strong> pointing to
 </article>
 
   <section class="comments">
-    <h2>Comments</h2>
+    <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the comments</noscript>
 </div>
   </section>
@@ -310,16 +313,6 @@ should configure a <strong>CNAME record</strong> pointing to
 
 
 
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
