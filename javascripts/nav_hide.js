@@ -8,7 +8,7 @@ $(window).load(function(){
   });
   $(window).scroll(function(){
     if($(window).width() < 980){
-      if($(window).scrollTop() > 216){
+      if($(window).scrollTop() > $('#sidebar').height() - $('#sidebar > #menu').height()){
         fixNav();
       } else {
         unfixNav();
@@ -35,8 +35,10 @@ function expandArticle(){
 }
 
 function fixNav(){
-  $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: '-216px', boxShadow: '0 0 10px rgba(0,0,0,0.1)'}).addClass('nav_fixed');
-  $('#main').css({marginTop: 254});
+  var nav_height = $('#sidebar').height()
+  var to_top = nav_height - $('#sidebar > #menu').height();
+  $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: -$(to_top), boxShadow: '0 0 10px rgba(0,0,0,0.1)'}).addClass('nav_fixed');
+  $('#main').css({marginTop: nav_height});
 }
 
 function unfixNav(){
