@@ -6,6 +6,18 @@ $(window).load(function(){
       expandArticle();
     }
   });
+
+  if($(window).width() < 980){
+    if($('#no_distractions').length > 0) {
+      expandNav();
+    }
+    if($(window).scrollTop() > $('#sidebar').height() - $('#sidebar > #menu').height()){
+      fixNav();
+    }
+  } else if($(window).width() > 979 && $('.nav_fixed').length > 0) {
+    unfixNav();
+  }
+
   $(window).scroll(function(){
     if($(window).width() < 980){
       if($(window).scrollTop() > $('#sidebar').height() - $('#sidebar > #menu').height()){
@@ -16,8 +28,13 @@ $(window).load(function(){
     }
   });
   $(window).resize(function(){
-    if($(window).width() < 980 && $('#no_distractions').length > 0){
-      expandNav();
+    if($(window).width() < 980){
+      if($('#no_distractions').length > 0) {
+        expandNav();
+      }
+      if($(window).scrollTop() > $('#sidebar').height() - $('#sidebar > #menu').height()){
+        fixNav();
+      }
     } else if($(window).width() > 979 && $('.nav_fixed').length > 0) {
       unfixNav();
     }
