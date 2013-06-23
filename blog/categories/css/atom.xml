@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CSS | Joe Woodward]]></title>
+  <link href="http://joewoodward.github.io/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://joewoodward.github.io/"/>
+  <updated>2013-06-23T01:53:15+01:00</updated>
+  <id>http://joewoodward.github.io/</id>
+  <author>
+    <name><![CDATA[Joe Woodward]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Kick CSS' ass with Sass]]></title>
+    <link href="http://joewoodward.github.io/blog/2013/06/21/kick-css-ass-with-sass/"/>
+    <updated>2013-06-21T18:59:00+01:00</updated>
+    <id>http://joewoodward.github.io/blog/2013/06/21/kick-css-ass-with-sass</id>
+    <content type="html"><![CDATA[<p><blockquote><p>Sass makes CSS fun again. Sass is an extension of CSS3, adding nested rules, variables, mixins, selector inheritance, and more. It’s translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.</p></blockquote></p>
+
+<p><img src="/images/sass_logo.gif"></p>
+
+<!-- more -->
+
+
+<h4>Why You Should Use Sass</h4>
+
+<p>Are you are the kind of developer that is always looking for
+more efficient coding techniques? <a href="http://sass-lang.com/">Sass</a> is an extension of CSS3 that
+delivers tons of useful tools to speed up your frontend development
+workflow.</p>
+
+<h5>What Can You Do With Sass</h5>
+
+<ul>
+<li>Use @import to modularize your Sass</li>
+<li>Prevent injuries by using nested selectors</li>
+<li>Save time with selector inheritance</li>
+<li>Stop repeating yourself by using variables and basic math</li>
+<li>Amaze yourself with the power of mixins</li>
+<li>Experiment with lots of other cool functions</li>
+</ul>
+
+
+<h4>Using @import To Modularize Your Sass</h4>
+
+<p>One of the great benifits of preprocessing CSS is modularization.
+Your single CSS file can be split into many smaller Sass files, with
+Sass' @import directive we can include all of these partials into our
+main Sass file before it is compiles to CSS.</p>
+
+<p>You can structure your files how ever you feel comfortable.
+For me, a typical project would look something similar to this.</p>
+
+<ul>
+<li>stylesheets/
+
+<ul>
+<li>screen.scss # import all partials into here</li>
+<li>modules/
+
+<ul>
+<li>_fonts.scss # font-face definitions and font imports etc..</li>
+<li>_utitlities.scss # mixin and variable definitions</li>
+</ul>
+</li>
+<li>partials/
+
+<ul>
+<li>_base.scss # import all variable and mixin definitions into here</li>
+<li>_buttons.scss # button styles</li>
+<li>_grid.scss # grid styles</li>
+<li>_reset.scss # browser reset</li>
+<li>_typography.scss # styles for text elements</li>
+<li>layout/
+
+<ul>
+<li>_article.scss # styles for articles</li>
+<li>_header.scss # styles for header element</li>
+<li>_footer.scss # styles for footer element</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>vendor/ # styles for external projects
+
+<ul>
+<li>_bootstrap.scss</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Now all we have to do is import all of these
+partials into screen.scss</p>
+
+<pre>
+// Mixins and variables
+@import "partials/base";
+
+// Partials
+@import "partials/reset";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/grid";
+@import "partials/layout/header";
+@import "partials/layout/article";
+@import "partials/layout/footer";
+
+// 3rd party stylesheets
+@import "vendor/bootstrap"
+</pre>
+
+
+<p>Modularizing your Sass like this makes it a lot easier to navigate the
+CSS during development but unlike the css @import function, does not
+slow browser load times.</p>
+
+<h4>Writing CSS Can Be Strenuous Unless You Use Sass' Nested Selectors</h4>
+
+<p>Writing CSS can become menotonous after writing the same selectors over
+and over again for nested elements. Sass handles this by enabling nested
+selectors, like so.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -110,12 +110,12 @@ function renderDeliciousLinks(items) {
 }
 
 $('document').ready(function() {
-  testFeatures();
-  wrapFlashVideos();
-  flashVideoFallback();
-  addCodeLineNumbers();
-  getNav();
-  addSidebarToggler();
+  //testFeatures();
+  //wrapFlashVideos();
+  //flashVideoFallback();
+  //addCodeLineNumbers();
+  //getNav();
+  //addSidebarToggler();
 });
 
 // iOS scaling bug fix
