@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://joewoodward.github.io/sitemap.xml 
+Sitemap: http://joewoodward.me/sitemap.xml 

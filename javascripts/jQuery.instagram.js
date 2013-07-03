@@ -32,7 +32,6 @@ function loadInstagram() {
     timeout: 10000,
     url: "https://api.instagram.com/v1/users/6143263/media/recent/?access_token=6143263.09a5c02.f52e35ef4c2f44769568ca1401ee474d",
     success: function(data) {
-      $('.instagram').css('opacity', 0).append('<img class="instagram-avatar" src="' + data.data[0].user.profile_picture + '"></img><h2 class="margin-auto">'+ data.data[0].user.username +'\'s recent instagrams</h2>');
       var i = 0;
       for(i; i < 4; i++){
         $(".instagram").append("<img class='instagram-image' src='" + data.data[i].images.standard_resolution.url +"' />");

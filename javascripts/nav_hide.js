@@ -44,17 +44,19 @@ $(window).load(function(){
 function expandNav(){
   $('#no_distractions').attr('id', 'main');
   $('#no_distractions_toggle').css({left: '27%', backgroundImage: '', borderRadius: 0, borderTopLeftRadius: 5, borderBottomLeftRadius: 5, borderRight: 'none', borderLeft: '1px solid #e8e8e8'}).text('<');
+  $.cookie('fullscreen', false);
 }
 
 function expandArticle(){
   $('#main').attr('id', 'no_distractions');
   $('#no_distractions_toggle').css({left: 30, backgroundImage: 'url(/images/line-tile.png)', borderRadius: 0, borderTopRightRadius: 5, borderBottomRightRadius: 5, borderLeft: 'none', borderRight: '1px solid #e8e8e8'}).text('>');
+  $.cookie('fullscreen', true);
 }
 
 function fixNav(){
-  var nav_height = $('#sidebar').height()
+  var nav_height = $('#sidebar').height();
   var to_top = nav_height - $('#sidebar > #menu').height();
-  $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: -$(to_top), boxShadow: '0 0 10px rgba(0,0,0,0.1)'}).addClass('nav_fixed');
+  $('#sidebar').css({  position: 'fixed', zIndex: '10000', top: -to_top, boxShadow: '0 0 10px rgba(0,0,0,0.1)'}).addClass('nav_fixed');
   $('#main').css({marginTop: nav_height});
 }
 

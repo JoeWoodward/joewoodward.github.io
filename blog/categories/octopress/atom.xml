@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Octopress | Joe Woodward]]></title>
-  <link href="http://joewoodward.github.io/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://joewoodward.github.io/"/>
-  <updated>2013-06-23T01:53:15+01:00</updated>
-  <id>http://joewoodward.github.io/</id>
+  <link href="http://joewoodward.me/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://joewoodward.me/"/>
+  <updated>2013-07-03T22:21:52+01:00</updated>
+  <id>http://joewoodward.me/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress on GitHub Pages in 15 minutes]]></title>
-    <link href="http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages/"/>
+    <link href="http://joewoodward.me/blog/2013/06/02/blogging-with-octopress-and-github-pages/"/>
     <updated>2013-06-02T23:21:00+01:00</updated>
-    <id>http://joewoodward.github.io/blog/2013/06/02/blogging-with-octopress-and-github-pages</id>
+    <id>http://joewoodward.me/blog/2013/06/02/blogging-with-octopress-and-github-pages</id>
     <content type="html"><![CDATA[<p><blockquote><p>Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages. To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress All of that is already taken care of.</p></blockquote></p>
 
 <p><img src="/images/octopress_logo.png" title="Octopress" ></p>
