@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Joe Woodward]]></title>
   <link href="http://joewoodward.me/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://joewoodward.me/"/>
-  <updated>2013-07-03T22:21:52+01:00</updated>
+  <updated>2013-07-08T18:24:57+01:00</updated>
   <id>http://joewoodward.me/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -163,7 +163,7 @@ $ echo 'your-domain.com' >> source/CNAME
 
 <ul>
 <li>If you are using a domain like <code>your-domain.com</code> you should
-configure an <strong>A record</strong> pointing to <code>204.232.175.78</code></li>
+configure an <strong>A record</strong> pointing to <code>207.97.227.245</code></li>
 <li>If you are using subdomains like <code>blog.your-domain.com</code> you
 should configure a <strong>CNAME record</strong> pointing to
 <code>username.github.io</code></li>
