@@ -4,7 +4,7 @@
   <title><![CDATA[Joe Woodward]]></title>
   <link href="http://joewoodward.me/atom.xml" rel="self"/>
   <link href="http://joewoodward.me/"/>
-  <updated>2013-07-08T19:22:15+01:00</updated>
+  <updated>2013-07-26T15:44:23+01:00</updated>
   <id>http://joewoodward.me/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -12,6 +12,162 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Your Apps With The Rails Composer Template]]></title>
+    <link href="http://joewoodward.me/blog/2013/07/26/setup-your-apps-with-the-rails-composer-template/"/>
+    <updated>2013-07-26T14:06:00+01:00</updated>
+    <id>http://joewoodward.me/blog/2013/07/26/setup-your-apps-with-the-rails-composer-template</id>
+    <content type="html"><![CDATA[<blockquote><p>It&#8217;s like the Rails generator on steroids. Generate an app in minutes using an application template. With all the options you want.</p></blockquote>
+
+
+<p><img src="http://joewoodward.me/images/rails_composer_app.png"></p>
+
+<!-- more -->
+
+
+<p>I love automating systems where possible, so naturally, when I found out about Rails
+templates I was super excited. Previously I used my own template until I recently
+found <a href="https://github.com/RailsApps/rails-composer">this amazing template</a> designed
+by the guys at <a href="http://railsapps.github.io/">RailsApp</a>.</p>
+
+<p>If you&rsquo;ve never used a template to generate a new Rails app you&rsquo;re
+missing out, it&rsquo;s super simple and saves you massive amounts of time
+by configuring basic stuff like user logins, emails, test suite tools
+etc.. In fact, you can create a template to set up apps however you
+like. Hell.. you could even create a template to build a complete app if you
+wanted.</p>
+
+<p>Rails-Composer is an extensively designed template that is capable of
+configuring almost every last detail in your new Rails app.
+You don&rsquo;t even need to download anything to use it.</p>
+
+<p>To use a template when creating a new Rails project just include an -m
+flag and the location of the template, in our case it&rsquo;s stored online
+but you can also store it within a local directory.</p>
+
+<p>I personally prefer to use RSpec over Test::Unit so I&rsquo;ll include the -T
+flag to skip Test::Unit. When we run the command the template will
+ask a series of questions on how to setup the app, once you&rsquo;ve answered
+them all the template will work it&rsquo;s magic and create an app to you
+specification.</p>
+
+<pre>
+$ rails new myapp -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T -O
+</pre>
+
+
+<p>You should see some output and then you&rsquo;ll be asked &ldquo;Install an example application for Rails 3.2? (or Rails 4 depending on your version)&rdquo; and given some options.</p>
+
+<p><img src="http://joewoodward.me/images/rails_composer_question_1.png"></p>
+
+<p>If you choose to <strong>1) I want to build my own app</strong> it will build a skeleton app with the configuration you specify.</p>
+
+<p>Here is the list of questions you will be asked if you are using Rails
+3.2</p>
+
+<pre>
+question  Install an example application?
+        1)  I want to build my own application
+        2)  membership/subscription/saas (Stripe or Recurly)
+        3)  rails-prelaunch-signup
+        4)  rails3-bootstrap-devise-cancan
+        5)  rails3-devise-rspec-cucumber
+        6)  rails3-mongoid-devise
+        7)  rails3-mongoid-omniauth
+        8)  rails3-subdomains
+
+question  Web server for development?
+      1)  WEBrick (default)
+      2)  Thin
+      3)  Unicorn
+      4)  Puma
+
+question  Web server for production?
+      1)  Same as development
+      2)  Thin
+      3)  Unicorn
+      4)  Puma
+
+question  Database used in development?
+      1)  SQLite
+      2)  PostgreSQL
+      3)  MySQL
+      4)  MongoDB
+
+question  Template engine?
+      1)  ERB
+      2)  Haml
+      3)  Slim (experimental)
+
+question  Unit testing?
+      1)  Test::Unit
+      2)  RSpec
+
+question  Integration testing?
+      1)  None
+      2)  RSpec with Capybara
+      3)  Cucumber with Capybara
+      4)  Turnip with Capybara
+
+question  Fixture replacement?
+      1)  None
+      2)  Factory Girl
+      3)  Machinist
+
+question  Front-end framework?
+      1)  None
+      2)  Twitter Bootstrap
+      3)  Zurb Foundation
+      4)  Skeleton
+      5)  Just normalize CSS for consistent styling
+
+question  Twitter Bootstrap version?
+      1)  Twitter Bootstrap (Less)
+      2)  Twitter Bootstrap (Sass)
+
+question  Add support for sending email?
+      1)  None
+      2)  Gmail
+      3)  SMTP
+      4)  SendGrid
+      5)  Mandrill
+
+question  Authentication?
+      1)  None
+      2)  Devise
+      3)  OmniAuth
+
+question  Devise modules?
+      1)  Devise with default modules
+      2)  Devise with Confirmable module
+      3)  Devise with Confirmable and Invitable modules
+
+question  Authorization?
+      1)  None
+      2)  CanCan with Rolify
+
+question  Use a form builder gem?
+      1)  None
+      2)  SimpleForm
+
+question  Install a starter app?
+      1)  None
+      2)  Home Page
+      3)  Home Page, User Accounts
+      4)  Home Page, User Accounts, Admin Dashboard
+
+extras  Add 'therubyracer' JavaScript runtime (for Linux users without node.js)? (y/n)
+extras  Set a robots.txt file to ban spiders? (y/n) n
+extras  Create a project-specific rvm gemset and .rvmrc? (y/n) n
+extras  Create a GitHub repository? (y/n)
+</pre>
+
+
+<p>How easy was that! Now you can change into the app directory and fire up
+the server and you&rsquo;re good to go.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress on GitHub Pages in 15 minutes]]></title>
