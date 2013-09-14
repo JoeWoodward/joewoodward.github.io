@@ -4,7 +4,7 @@
   <title><![CDATA[Joe Woodward]]></title>
   <link href="http://joewoodward.me/atom.xml" rel="self"/>
   <link href="http://joewoodward.me/"/>
-  <updated>2013-07-28T00:03:26+01:00</updated>
+  <updated>2013-09-14T13:44:14+01:00</updated>
   <id>http://joewoodward.me/</id>
   <author>
     <name><![CDATA[Joe Woodward]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Improve Your Ruby Using Koans]]></title>
+    <link href="http://joewoodward.me/blog/2013/09/09/improve-your-ruby-using-koans/"/>
+    <updated>2013-09-09T14:38:00+01:00</updated>
+    <id>http://joewoodward.me/blog/2013/09/09/improve-your-ruby-using-koans</id>
+    <content type="html"><![CDATA[<p><img src="http://joewoodward.me/images/enso.jpg"></p>
+
+<p>I recently decided to brush up on my ruby knowledge and found
+<a href="http://rubykoans.com/">Ruby Koans</a> on my search for useful resources.</p>
+
+<p>Ruby Koans is authored by <a href="https://twitter.com/jimweirich">@jimweirich</a>
+and <a href="https://twitter.com/objo">@objo</a>, the koans are available for download
+or if you prefer, there is also an <a href="http://koans.heroku.com/en">online version</a>.</p>
+
+<!-- more -->
+
+
+
+
+<blockquote><p>The Koans walk you along the path to enlightenment in order to learn Ruby. The goal is to learn the Ruby language, syntax, structure, and some common functions and libraries. We also teach you culture. Testing is not just something we pay lip service to, but something we live. It is essential in your quest to learn and do great things in the language.</p></blockquote>
+
+
+<p>If you need to brush up on your skills I highly recommend Ruby Koans. It
+uses a red, green, refactor approach similar to TDD and takes you
+from arrays to enlightenment. You can use your favourite editor to fix
+the bugs then run <strong>$ ruby path_to_enlightenment.rb</strong> to see how well
+you&rsquo;ve done. It&rsquo;s really addictive and fun, give it a go, let me know what
+you think.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup Your Apps With The Rails Composer Template]]></title>
